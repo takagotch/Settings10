@@ -231,6 +231,53 @@ user.authenticate("foobaz")
 
 ```sh
 vi app/views/layouts/application.html.erb
+vi app/assets/stylesheets/custom.scss
+curl https://localhost:3000/
+
+rails c
+User.count
+User.first
+
+vi config/routes.rb
+vi config/routes.rb
+curl https://localhost:3000/
+curl https://localhost:3000/users
+curl https://localhost:3000/users/1
+curl https://localhost:3000/users/new
+curl https://localhost:3000/users/
+curl https://localhost:3000/users/1/edit
+curl https://localhost:3000/users/1
+curl https://localhost:3000/users/1
+
+vi app/views/users/show.html.erb
+vi app/controllers/users_controller.rb
+vi app/controllers/users_controller.rb
+vi app/controllers/users_controller.rb
+vi app/views/users/show.html.erb
+vi app/helpers/users_helper.rb
+curl https://localhost:3000/users/1
+
+rails c
+vi app/views/users/show.html.erb
+vi app/assets/stylesheets/custom.scss
+curl https://localhost:3000/users/1
+vi app/helpers/users_helper.rb
+vi app/helpers/users_helper.rb
+curl https://localhost:3000/users/signup
+vi app/controllers/users_controller.rb
+vi app/views/users/new.html.erb
+vi app/assets/stylesheets/custom.scss
+curl https://localhost:3000/users/signup
+
+
+
+
+
+
+
+
+
+
 
 
 
