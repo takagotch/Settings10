@@ -359,14 +359,42 @@ vi app/assets/javascripts/application.js
 curl https://localhost:3000/users/1
 vi app/models/user.rb
 vi test/fixtures/users.yml
+vi test/integration/users_login_test.rb
+rails test test/integration/users_login_test.rb
+vi app/controllers/users_controller.rb
+vi test/test_helper.rb
+vi test/integration/users_signup_test.rb
+rails t
+vi app/helpers/sessions_helper.rb
+vi app/controllers/sessions_controller.rb
+vi test/integration/users_login_test.rb
+rails t
+```
 
-
-
-
+```sh
 
 
 ```
+```sh
 
+
+```
+```sh
+
+
+```
+```sh
+
+
+```
+```sh
+
+
+```
+```sh
+
+
+```
 ```sh
 
 
