@@ -760,6 +760,57 @@ vi .gitignore
 ```
 
 ```sh
+rails g model Relationship follower_id:integer followed_id:integer
+vi db/migrate/[timestamp]_create_relationships.rb
+rails db:migrate
+vi app/models/user.rb
+vi app/models/relationship.rb
+vi test/models/relationship_test.rb
+vi app/models/relationship.rb
+vi test/fixtures/relationships.yml
+rails t
+vi app/models/user.rb
+vi test/models/user_test.rb
+vi app/models/user.rb
+rails t
+vi app/models/user.rb
+vi test/models/user_test.rb
+rails t
+
+vi db/seeds.rb
+rails db:migrate:reset
+rails db:seed
+vi config/routes.rb
+vi app/views/shared/_stats.html.erb
+vi app/views/static_pages/home.html.erb
+vi app/assets/stylesheets/custom.scss
+curl https://localhost:3000/
+vi app/views/users/_follow_form.html.erb
+vi config/routes.rb
+vi app/views/users/_follow.html.erb
+vi app/views/users/_unfollow.html.erb
+vi app/views/users/show.html.erb
+curl https://localhost:3000/users/2
+curl https://localhost:3000/users/5
+vi test/controllers/users_controller_test.rb
+vi app/controllers/users_controller.rb
+vi app/views/users/show_follow.html.erb
+curl https://localhost:3000/users/1/following
+curl https://localhost:3000/users/1/followers
+curl https://localhost:3000/users/5/followers
+rails t
+
+rails g integration_test following
+vi test/fixtures/relationships.yml
+vi test/integration/followint_test.rb
+rails t
+curl https://localhost:3000/users/1/following
+curl https://localhost:3000/users/1/followers
+
+rails g controller Relationships
+
+
+
 
 
 ```
