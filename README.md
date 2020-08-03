@@ -319,10 +319,20 @@ vi config/puma.rb
 vi ./Procfile
 ```
 
-```
-```
+```sh
+rails g controller Sessions new
+vi config/routes.rb
+vi test/controllers/sessions_controller_test.rb
+
+
+
+
 
 ```
+
+```sh
+
+
 ```
 
 ```sh
@@ -467,6 +477,11 @@ git merge modeling-users
 git checkout -b sign-up
 git checkout master
 git merge sign-up
+
+git checkout -b basic-login
+git checkout master
+git merge basic-login
+
 
 
 # ps aux
