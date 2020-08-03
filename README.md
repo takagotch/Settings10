@@ -518,6 +518,7 @@ vi test/fixtures/users.yml
 vi test/controllers/users_controller_test.rb
 vi test/integration/users_index_test.rb
 rails t
+curl https://localhost:3000/users
 ```
 
 ```sh
@@ -536,10 +537,15 @@ rails t
 
 
 ```
-```sh
 
 
-```
+
+
+
+
+
+
+
 
 ```sh
 git init .
