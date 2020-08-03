@@ -323,6 +323,43 @@ vi ./Procfile
 rails g controller Sessions new
 vi config/routes.rb
 vi test/controllers/sessions_controller_test.rb
+rails routes
+vi app/views/sessions/new.html.erb
+curl https://localhost:3000/login
+vi app/controllers/sessions_controller.rb
+vi app/controllers/sessions_controller.rb
+vi app/controllers/sessions_controller.rb
+curl https://localhost:3000/login
+curl https://localhost:3000/
+
+rails g integration_test users_login
+vi test/integration/users_login_test.rb
+rails test test/integration/users_login_test.rb
+vi app/controllers/sessions_controller.rb
+rails t test/integration/users_login_test.rb
+vi rails test
+
+vi app/controllers/application_controller.rb
+vi app/helpers/sessions_helper.rb
+vi app/controllers/sessions_controller.rb
+
+vi app/helpers/sessions_helper.rb
+
+rails c
+session = {}
+session[] = nil
+@current_user ||= User.find_by(id: session[:user_id])
+session[:user_id]= User.first.id
+@current_user ||= User.find_by(id: session[:user_id])
+@current_user ||= User.find_by(id: session[:user_id])
+
+vi app/helpers/sessions_helpers.rb
+vi app/views/layouts/_header.html.erb
+vi app/assets/javascripts/application.js
+curl https://localhost:3000/users/1
+vi app/models/user.rb
+vi test/fixtures/users.yml
+
 
 
 
