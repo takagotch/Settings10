@@ -547,6 +547,12 @@ git checkout -b basic-login
 git checkout master
 git merge basic-login
 
+git checkout -b advanced-login
+git checkout master
+git merge advanced-login
+
+
+
 
 
 # ps aux
