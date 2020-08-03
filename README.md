@@ -50,6 +50,59 @@ vi app/controllers/application_controller.rb
 ```
 
 ```
+vi app/views/layouts/application.html.erb
+vi app/views/static_pages/home.html.erb
+curl -o app/assets/images/rails.png -OL railstutorial.jp/rails.png
+curl -0L cdn.learnenough.com/kitten.jpg
+vi Gemfile
+bundle install 
+touch app/assets/stylesheets/custom.scss
+vi app/assets/stylesheets/custom.scss
+curl https://localhost:3000/
+vi app/assets/stylesheets/custom.scss
+vi app/assets/stylesheets/custom.scss
+vi app/assets/stylesheets/custom.scss
+vi app/views/layouts/application.html.erb
+vi app/views/layouts/_shim.html.erb
+vi app/views/layouts/_header.html.erb
+vi app/views/layouts/_footer.html.erb
+vi app/views/layouts/application.html.erb
+vi app/assets/stylesheets/custom.scss
+vi app/views/layouts/application.html.erb
+ls app/assets/
+vi app/assets/stylesheets/application.css
+vi app/assets/stylesheets/custom.scss
+vi test/controllers/static_pages_controller_test.rb
+rails t
+vi config/routes.rb
+vi app/controllers/static_pages_controller.rb
+vi app/views/static_pages/contact.html.erb
+rails t
+vi config/routes.rb
+vi test/controllers/static_pages_controller_test.rb
+vi config/routes.rb
+vi app/views/layouts/_header.html.erb
+vi app/views/layouts/_footer.html.erb
+curl https://localhost:3000/about
+rails g integration_test site_layout
+vi test/integration/site_layout_test.rb
+rails test:integration
+rails t
+vi test/test_helper.rb
+vi test/integration/site_layout_test.rb
+vi test/helpers/application_helper_test.rb
+rails g controller Users new
+vi app/controllers/users_controller.rb
+vi app/views/users/new.html.erb
+vi test/controllers/users_controller_test.rb
+rails t
+vi config/routes.rb
+vi test/controllers/users_controller_test.rb
+vi app/views/static_pages/home.html.erb
+vi app/views/users/new.html.erb
+
+
+
 ```
 
 ```
@@ -194,6 +247,10 @@ git merge static-pages
 git checkout -b rails-ruby
 git checkout master
 git merge rails-ruby
+
+git checkout -b layout
+git checkout master
+git merge layout
 
 # ps aux
 sudo yum install -y tmux
