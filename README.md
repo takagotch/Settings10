@@ -92,24 +92,82 @@ vi app/views/static_pages/help.html.erb
 
 ls test/controllers/
 vi test/controllers/static_pages_controller_test.rb
+rails test
+vi test/controllers/static_pages_controller_test.rb
+rails t
+vi config/routes.rb
+rails t
+vi app/controllers/static_pages_controller.rb
+rails t
+touch app/views/static_pages/about.html.erb
+vi app/views/static_pages/about.html.erb
+rails t
+curl https://localhost:3000/
+curl https://localhost:3000/static_pages
+curl https://localhost:3000/static_pages/about
+mv app/views/layouts/application.html.erb layout_file
+vi test/controllers/static_pages_controller_test.rb
+rails t
+vi app/views/static_pages/home.html.erb
+curl https://localhost:3000/
+vi app/views/static_pages/help.html.erb
+vi app/views/static_pages/about.html.erb
+rails t
+vi test/controllers/static_page_controller_test.rb
+vi app/views/static_pages/home.html.erb
+rails t
+vi app/views/static_pages/help.html.erb
+vi app/views/static_pages/about.html.erb
+mv layout_file app/views/layouts/application.html.erb
+vi app/views/layouts/application.html.erb
+vi app/views/static_pages/home.html.erb
+vi app/views/static_pages/help.html.erb
+vi app/views/static_pages/about.html.erb
+rails t
+vi app/views/static_pages/contact.html.erb
+vi config/routes.rb
+vi test/controllers/static_pages_controller_test.rb
+vi config/routes.rb
+
+vi test/test_helper.rb
+bundle exec guard init
+sudo yum install -y tmux
+vi Guardfile
+vi .gitignore
+bundle exec guard
 
 ```
 
 
 ```
 <%#
+# generate, destroy
 rails g controller StaticPages home help
 rails destroy controller StaticPages home help
 
 rails g model User name:string email:string
 rails destroy model User
 
+# rails db:migrate
 rails db:migrate
 rails db:rollback
 rails db:migrate VERSION=0
+
+# git 
+git checkout -b static-pages
+git checkout master
+git merge static-pages
+
+# ps aux
+sudo yum install -y tmux
+ps aux
+ps aux | grep sprint
+kill -15 12241
+sprint stop
+pkill -15 -f spring
+
+
 %>
-
-
 ```
 
 ```
