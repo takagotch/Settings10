@@ -377,6 +377,11 @@ git checkout -b modeling-users
 git checkout master
 git merge modeling-users
 
+git checkout -b sign-up
+git checkout master
+git merge sign-up
+
+
 # ps aux
 sudo yum install -y tmux
 ps aux
