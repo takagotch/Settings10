@@ -522,8 +522,79 @@ curl https://localhost:3000/users
 ```
 
 ```sh
+rails g controller AccountActivations
+vi config/routes.rb
+rails g migration add_activation_to_users \
+                  activation_digest:string activated:boolean activated_at:datetime
+vi db/migrate/[timestamp]_add_activation_to_users.rb
+rails db:migrate
 
+rails c
+vi app/models/user.rb
+vi db/seeds.rb
+vi test/fixtures/users.yml
+rails db:migrate:reset
+rails db:seed
 
+rails g mailer UserMailer account_activation password_reset
+vi app/views/user_mailer/account_activation.text.erb
+vi app/views/user_mailer/account_activation.html.erb
+vi app/mailers/application_mailer.rb
+vi app/mailers/user_mailer.rb
+vi app/mailers/application_mailer.rb
+vi app/mailers/user_mailer.rb
+vi app/views/user_mailer/account_activation.text.erb
+vi app/views/user_mailer/account_activation.html.erb
+
+rails c
+CGI.escape('tky@gmail.com')
+
+vi config/environments/development.rb
+vi test/mailers/previews/user_mailer_preview.rb
+vi test/mailers/previews/user_mailer_preview.rb
+curl https://localhost:3000/rails/mailers/user_mailer/account_activation
+curl https://localhost:3000/rails/mailers/user_mailer/account_activation.txt
+vi test/mailers/user_mailer_test.rb
+vi test/mailers/user_mailer_test.rb
+vi config/environments/test.rb
+rails test:mailers
+vi app/controllers/users_controller.rb
+vi test/integration/users_signup_test.rb
+
+rails c
+a = [1, 2, 3]
+a.length
+a.send(:length)
+a.send("length")
+
+user = User.first
+user.activation_digest
+user.send(:activation_digest)
+user.send("activation_digest")
+user.send("#{attribute}_digest")
+
+vi app/models/user.rb
+rails t
+vi app/helpers/sessions_helper.rb
+vi test/models/user_test.rb
+rails t
+
+vi app/controllers/account_activations_controller.rb
+curl https://localhost:3000/users/101
+vi app/controllers/sessions_controller.rb
+curl https://localhost:3000/
+vi test/integration/users_signup_test.rb
+rails t
+vi app/models/user.rb
+vi app/controllers/users_controller.rb
+vi app/controllers/account_activations_controller.rb
+rails t
+
+vi app/models/user.rb
+vi app/controllers/users_controller.rb
+
+vi config/environments/production.rb
+curl https://localhost:3000/users/1
 ```
 ```sh
 
@@ -566,6 +637,10 @@ heroku pg:reset DATABASE
 heroku run rails db:migrate
 heroku run rails db:seed
 heroku restart
+
+heroku addons:create sendgrid:starter
+heroku config:get SENDGRID_USERNAME
+heroku config:get SENDGRID_PASSWORD
 ```
 
 ```
