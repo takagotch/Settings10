@@ -385,7 +385,39 @@ vi app/models/user.rb
 vi app/models/user.rb
 vi app/models/user.rb
 vi app/controllers/sessions_controller.rb
-vi 
+vi app/helpers/sessions_helper.rb
+vi app/helpers/sessions_helper.rb
+rails t
+vi app/models/user.rb
+vi app/helpers/sessions_helper.rb
+rails t
+vi test/integration/users_login_test.rb
+rails t
+vi app/controllers/sessions_controller.rb
+vi test/models/user_test.rb
+rails t
+vi app/models/user.rb
+railt t
+
+vi app/views/sessions/new.htmle.erb
+vi app/assets/stylesheets/custom.scss
+curl https://localhost:3000/login
+vi app/controllers/sessions_controller.rb
+
+vi test/test_helper.rb
+vi test/integration/users_login_test.rb
+rails t
+
+vi app/controllers/sessions_controller.rb
+vi test/integration/users_login_test.rb
+vi app/helpers/sessions_helper.rb
+rails t
+touch test/helpers/sessions_helper_test.rb
+vi test/helpers/sessions_helper_test.rb
+rails t test/helpers/sessions_helper_test.rb
+vi app/helpers/sessions_helper.rb
+rails t
+
 
 
 
@@ -440,6 +472,7 @@ heroku run rails db:migrate
 
 heroku logs
 heroku run rails console --sandbox
+heroku maintenance:off
 ```
 
 ```
