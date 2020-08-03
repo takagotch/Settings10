@@ -49,7 +49,7 @@ vi app/controllers/microposts_controller.rb
 vi app/controllers/application_controller.rb
 ```
 
-```
+```sh
 vi app/views/layouts/application.html.erb
 vi app/views/static_pages/home.html.erb
 curl -o app/assets/images/rails.png -OL railstutorial.jp/rails.png
@@ -229,7 +229,12 @@ user.authenticate("foobaz")
 ```
 
 
-```
+```sh
+vi app/views/layouts/application.html.erb
+
+
+
+
 ```
 
 ```
@@ -389,6 +394,13 @@ ps aux | grep sprint
 kill -15 12241
 sprint stop
 pkill -15 -f spring
+
+#
+rails c
+rails c test
+rails s --environment production
+rails db:migrate RAILS_ENV=production
+heroku run rails console
 
 
 %>
