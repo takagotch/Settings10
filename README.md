@@ -1,7 +1,7 @@
 ### Settings10
 ---
 
-
+https://github.com/yasslab/sample_apps
 
 ```sh
 cd ~/environment
@@ -372,6 +372,33 @@ rails t
 ```
 
 ```sh
+rails g migration add_remember_digest_to_users remember_digest:string
+vi db/migrate/[timestamp]_add_remember_digest_to_users.rb
+rails db:migrate
+
+rails c
+SecureRandom.urlsafe_base64
+
+vi app/models/user.rb
+vi app/models/user.rb
+vi app/models/user.rb
+vi app/models/user.rb
+vi app/models/user.rb
+vi app/controllers/sessions_controller.rb
+vi 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ```
