@@ -395,7 +395,7 @@ kill -15 12241
 sprint stop
 pkill -15 -f spring
 
-#
+# test, development, production
 rails c
 rails c test
 rails s --environment production
