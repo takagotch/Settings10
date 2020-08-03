@@ -635,15 +635,127 @@ vi app/models/user.rb
 vi test/integration/password_resets_test.rb
 vi app/controllers/password_resets_controller.rb
 vi config/environments/production.rb
-
-
-
-
-
 ```
 
 ```sh
+rails g model Micropost content:text user:references
+vi app/models/micropost.rb
+vi db/migrate/[timestamp]_create_microposts.rb
+rails db:migrate
+vi test/models/micropost_test.rb
+vi app/models/micropost.rb
+rails test:models
+vi test/models/micropost_test.rb
 
+rails c
+"a" * 10
+"a" * 141
+
+vi app/models/micropost.rb
+rails t
+vi app/models/micropost.rb
+vi app/models/user.rb
+vi test/models/micropost_test.rb
+rails t
+vi test/models/micropost_test.rb
+vi test/fixtures/microposts.yml
+rails test test/models/micropost_test.rb
+vi app/models/micropost.rb
+
+rails t
+vi app/models/user.rb
+vi test/models/user_test.rb
+rails t
+
+
+rails db:migrate:reset
+rails db:seed
+
+rails g controller Microposts
+vi app/views/microposts/_micropost.html.erb
+vi app/controllers/users_controller.rb
+vi app/views/users/show.html.erb
+curl https://localhost:3000/users/1
+vi db/seeds.rb
+
+rails db:migrate:reset
+rails db:seed
+curl https://localhost:3000/users/1
+vi app/assets/stylesheets/custom.scss
+curl https://localhost:3000/users/1
+curl https://localhost:3000/users/5
+curl https://localhost:3000/users/1?page=2
+
+rails g integration_test users_profile
+vi test/fixtures/microposts.yml
+vi test/integration/users_profile_test.rb
+rails t
+
+vi config/routes.rb
+vi test/controllers/microposts_controller_test.rb
+vi app/controllers/application_controller.rb
+vi app/controllers/users_controller.rb
+vi app/controllers/microposts_controller.rb
+rails t
+vi app/controllers/microposts_controller.rb
+vi app/views/static_pages/home.html.erb
+vi app/views/shared/_user_info.html.erb
+vi app/views/shared/_micropost_from.html.erb
+vi app/views/shared/_micropost_form.html.erb
+vi app/controllers/static_pages_controller.rb
+vi app/views/shared/_error_messages.html.erb
+rails t
+vi app/views/users/new.html.erb
+vi app/views/users/edit.html.erb
+vi app/views/password_resets/edit.html.erb
+rails t
+curl https://localhost:3000/
+curl https://localhost:3000/microposts
+curl https://localhost:3000/microposts/1
+
+vi app/models/user.rb
+vi app/controllers/static_pages_controller.rb
+vi app/views/shared/_feed.html.erb
+vi app/views/microposts/_micropost.html.erb
+vi app/views/static_pages/home.html.erb
+curl https://localhost:3000/
+vi app/controllers/microposts_controller.rb
+vi app/views/microposts/_micropost.html.erb
+vi app/controllers/microposts_controller.rb
+curl https://localhost:3000/
+vi test/fixtures/microposts.yml
+vi test/controllers/microposts_controller_test.rb
+
+rails g integration_test microposts_interface
+vi test/integration/microposts_interface_test.rb
+rails t
+vi test/integration/microposts_interface_test.rb
+
+vi Gemfile
+bundle install
+rails g uploader Picture
+rails g migration add_picture_to_microposts picture:string
+rails db:migrate
+vi app/models/micropost.rb
+vi app/views/shared/_micropost_form.html.erb
+vi app/controllers/microposts_controller.rb
+vi app/views/microposts/_micropost.html.erb
+curl https://localhost:3000/
+vi test/integration/microposts_interface_test.rb
+vi app/uploaders/picture_uploader.rb
+vi app/models/micropost.rb
+vi app/views/shared/_micropost_from.html.erb
+curl https://localhost:3000/
+
+sudo yum install -y ImageMagick
+
+vi app/uploaders/picture_uploader.rb
+curl https://localhost:3000/
+vi config/initializers/skip_image_resizing.rb
+vi app/uploaders/picture_uploader.rb
+vi config/initializers/carrier_wave.rb
+
+vi .gitignore
 
 ```
 
@@ -687,9 +799,15 @@ heroku config:get SENDGRID_PASSWORD
 
 heroku addons:create sendgrid:starter
 heroku addons:add sendgrid:starter
+
+git push heroku 
+heroku pg:reset DATABASE
+heroku run rails db:migrate
+heroku run rails db:seed
 ```
 
-```
+```sh
+
 
 ```
 
@@ -837,9 +955,13 @@ git checkout -b password-reset
 git checkout master
 git merge password-reset
 
+git checkout -b user-microposts
+git checkout master
+git merge user-microposts
 
-
-
+git checkout -b following-users
+git checkout master
+git merge following-users
 
 # ps aux
 sudo yum install -y tmux
@@ -856,7 +978,10 @@ rails s --environment production
 rails db:migrate RAILS_ENV=production
 heroku run rails console
 
-
+heroku config:set S3_ACCESS_KEY="xxx"
+heroku config:set S3_SECRET_KEY="xxx"
+heroku config:set S3_BUCKET="xxx"
+heroku config:set S3_REGION="xxx"
 %>
 ```
 
