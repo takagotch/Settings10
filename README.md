@@ -104,7 +104,7 @@ vi app/views/users/new.html.erb
 
 ```sh
 <%#
-model users 
+modeling-users
 %>
 rails g controller Users new
 rails g model User name:string email:string
@@ -215,11 +215,17 @@ vi app/models/user.rb
 
 rails t
 vi test/models/user_test.rb
+rails t
+vi test/models/user_test.rb
 
-
-
-
-
+vi app/models/user.rb
+rails test:models
+rails c
+user = User.find_by(email: "tky@gmail.com")
+user.password_digest
+user.authenticate("not_the_right_password")
+user.authenticate("foobaz")
+!!user.authenticate("foobar")
 ```
 
 
@@ -244,6 +250,7 @@ git push heroku master
 heroku run rails db:migrate
 
 heroku logs
+heroku run rails console --sandbox
 ```
 
 ```
