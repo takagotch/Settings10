@@ -787,7 +787,9 @@ git checkout -b account-activation
 git checkout master
 git merge account-activation
 
-
+git checkout -b password-reset
+git checkout master
+git merge password-reset
 
 
 
