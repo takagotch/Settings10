@@ -152,6 +152,56 @@ vi app/models/user.rb
 rails console --sandbox
 
 user.errors.full_messages
+user.save
+rails test:models
+
+vi test/models/user_test.rb
+vi app/models/user.rb
+rails test
+vi test/models/user_test.rb
+
+rails c
+"a" * 51
+("a" * 51).length
+"a" * 244 + "tky@gmail.com"
+("a" * 244 + "@gmail.com").length
+rails test
+vi app/models/user.rb
+rails test
+%w[foo bar baz]
+["USER@foo.COM", "THE_US-ER@foo.bar.org", "first.last@foo.jp"]
+puts address
+end
+
+vi test/models/user_test.rb
+vi test/models/user_test.rb
+rails test
+
+
+vi app/models/user.rb
+rails test:models
+vi app/models/user.rb
+test/models/user_test.rb
+vi app/models/user.rb
+vi test/models/user_test.rb
+
+rails console --sandbox
+user = User.create(name: "tky", email: "tky@gmail.com")
+user.email.upcase
+duplicate_user = user.dup
+duplicate_user.email = user.email.upcase
+duplicate_user.valid?
+
+vi app/models/user.rb
+rails test
+
+rails g migration add_index_to_users_email
+vi db/migrate/[timestamp]_add_index_to_users_email.rb
+rails db:migrate
+
+vi test/fixtures/users.yml
+vi test/fixtures/users.yml
+
 
 
 
