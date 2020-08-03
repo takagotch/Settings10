@@ -201,7 +201,20 @@ rails db:migrate
 
 vi test/fixtures/users.yml
 vi test/fixtures/users.yml
+vi test/fixtures/users.yml
+vi app/models/user.rb
+vi test/models/user_test.rb
+vi app/models/user.rb
 
+rails g migration add_password_digest_to_users password_digest:string
+vi db/migrate/[timestamp]_add_password_digest_to_users.rb
+rails db:migrate
+vi Gemfile
+bundle install
+vi app/models/user.rb
+
+rails t
+vi test/models/user_test.rb
 
 
 
