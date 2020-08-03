@@ -100,12 +100,63 @@ vi config/routes.rb
 vi test/controllers/users_controller_test.rb
 vi app/views/static_pages/home.html.erb
 vi app/views/users/new.html.erb
-
-
-
 ```
 
-```
+```sh
+<%#
+model users 
+%>
+rails g controller Users new
+rails g model User name:string email:string
+vi db/migrate/[timestamp]_create_users.rb
+rails db:migrate
+rails db:rollback
+vi db/schema.rb
+vi app/models/user.rb
+
+rails console --sandbox
+User.new
+user = User.new(name: "tky", email: "tky@gmail.com")
+user.valid?
+user.save
+user
+user.name
+user.email
+user.updated_at
+User.create(name: "A Nother", email: "tky@gamil.com")
+User.find(1)
+User.find(3)
+User.find_by(email: "tky@gmail.com")
+User.first
+User.all
+user
+user.email = "tky@gmail.com"
+user.save
+user.email
+user.email = "tky@gmail.com"
+user.reload.email
+user.created_at
+user.updated_at
+user.update_attributes(name: "tky", email: "tky@gmail.com")
+user.name
+user.email
+user.update_attribute(:name, "tky")
+user.name
+
+vi test/models/user_test.rb
+vi test/models/user_test.rb
+rails test:models
+vi test/models/user_test.rb
+rails test:models
+vi app/models/user.rb
+rails console --sandbox
+
+user.errors.full_messages
+
+
+
+
+
 ```
 
 
@@ -251,6 +302,10 @@ git merge rails-ruby
 git checkout -b layout
 git checkout master
 git merge layout
+
+git checkout -b modeling-users
+git checkout master
+git merge modeling-users
 
 # ps aux
 sudo yum install -y tmux
