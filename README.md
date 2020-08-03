@@ -708,6 +708,13 @@ git checkout -b updating-users
 git checkout master
 git merge updating-users
 
+git checkout -b account-activation
+git checkout master
+git merge account-activation
+
+
+
+
 
 
 
