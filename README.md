@@ -269,19 +269,54 @@ vi app/views/users/new.html.erb
 vi app/assets/stylesheets/custom.scss
 curl https://localhost:3000/users/signup
 
+vi app/controllers/users_controller.rb
+vi app/controllers/users_controller.rb
+curl https://localhost:3000/users/users
 
+rails c
+user = User.new(name: "tky", email: "tky@gmail.com",
+                password: "xxx", password_confirmation: "xxx")
+user.save
+user.errors.full_messages
+user.errors.count
+user.errors.empty?
+user.errors.any?
 
+vi app/views/users/new.html.erb
+mkdir app/views/shared
+vi app/views/shared/_error_messages.html.erb
+vi app/assets/stylesheets/custom.scss
 
+rails g integration_test users_signup
+rails c
+User.count
 
+vi test/integration/users_signup_test.rb
+rails t
+vi test/integration/users_signup_test.rb
 
+vi config/routes.rb
+vi app/views/users/new.html.erb
+vi app/controllers/users_controller.rb
+vi app/controllers/users_controller.rb
 
+rails c
+flash = { success: "It worked!", danger: "It failed." }
+flash.each do |key, value|
+puts "#{key}"
+puts "#{value}"
+end
 
+vi app/views/layouts/application.html.erb
+rails db:migrate:reset
 
-
-
-
-
-
+rails c
+vi test/integration/users_signup_test.rb
+vi test/integration/users_signup_test.rb
+vi app/views/layouts/application.html.erb
+vi config/environments/production.rb
+vi config/puma.rb
+vi ./Procfile
 ```
 
 ```
