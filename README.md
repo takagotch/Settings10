@@ -417,27 +417,109 @@ vi test/helpers/sessions_helper_test.rb
 rails t test/helpers/sessions_helper_test.rb
 vi app/helpers/sessions_helper.rb
 rails t
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
+
 ```sh
+vi app/controllers/users_controller.rb
+vi app/views/users/edit.html.erb
+curl https://localhost:3000/users/1/edit
 
+rails c
+User.new.new_record?
+User.first.new_record?
 
+vi app/views/layouts/_header.html.erb
+vi app/views/users/_form.htmle.erb
+vi app/views/users/new.html.erb
+vi app/controllers/users_controller.rb
+curl https://localhost:3000/users/1/
+
+rails g integration_test users_edit
+vi test/integration/users_edit_test.rb
+rails t
+
+vi test/integration/users_edit_test.rb
+vi app/controllers/users_controller.rb
+vi app/models/user.rb
+rails t
+
+vi app/controllers/user_controller.rb
+curl https://localhost:3000/login
+
+vi test/integration/users_edit_test.rb
+rails t
+vi app/controllersusers_controller.rb
+vi test/controllers/users_controller_test.rb
+vi app/controllers/users_controller.rb
+rails t
+vi test/fixtures/users.yml
+vi test/controllers/users_controller_test.rb
+vi app/controllers/users_controller.rb
+rails t
+vi app/helpers/sessions_helper.rb
+vi app/controllers/users_controller.rb
+vi test/integration/users_edit_test.rb
+vi app/helpers/sessions_helper.rb
+vi app/controllers/users_controller.rb
+vi app/controllers/sessions_controllerr.rb
+rails t
+vi test/controllers/users_controller_test.rb
+vi app/controllers/users_controller.rb
+vi app/controllers/users_controller.rb
+vi app/viewws/users/index.html.erb
+vi app/helpers/users_helper.rb
+vi app/assets/stylesheets/custom.scss
+vi app/views/layouts/_header.html.erb
+rails t
+curl https://localhost:3000/users
+vi Gemfile
+bundle install
+vi db/seeds.rb
+rails db:migrate:reset
+rails db:seed
+curl https://localhost:3000/users
+vi Gemfile
+bundle install
+vi app/views/users/index.html.erb
+
+rails c
+User.paginate(page: 1)
+vi app/controllers/users_controller.rb
+curl https://localhost:3000/users/
+vi test/fixtures/users.yml
+rails g integration_test users_index
+vi test/integration/users_index_test.rb
+rails t
+vi app/views/users/index.html.erb
+vi app/views/users/_user.html.erb
+vi app/views/users/index.html.erb
+rails t
+
+rails g migration add_admin_to_users admin:boolean
+vi db/migrate/[timestamp]_add_admin_to_users.rb
+rails db:migrate
+
+rails c
+user = User.first
+user.admin?
+user.toggle!(:admin)
+user.admin?
+
+vi db/seeds.rb
+rails db:migrate:reset
+rails db:seed
+
+vi test/controllers/users_controller_test.rb
+vi app/views/users/_user.html.erb
+curl https://localhost:3000/users
+vi app/controllers/users_controller.rb
+vi app/controllers/users_controller.rb
+vi test/fixtures/users.yml
+vi test/controllers/users_controller_test.rb
+vi test/integration/users_index_test.rb
+rails t
 ```
+
 ```sh
 
 
@@ -473,6 +555,11 @@ heroku run rails db:migrate
 heroku logs
 heroku run rails console --sandbox
 heroku maintenance:off
+
+heroku pg:reset DATABASE
+heroku run rails db:migrate
+heroku run rails db:seed
+heroku restart
 ```
 
 ```
