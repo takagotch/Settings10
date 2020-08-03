@@ -596,14 +596,57 @@ vi app/controllers/users_controller.rb
 vi config/environments/production.rb
 curl https://localhost:3000/users/1
 ```
+
+```sh
+rails g controller PasswordResets new edit --no-test-framework
+vi config/routes.rb
+vi app/views/sessions/new.html.erb
+curl https://localhost:3000/login
+rails g migration add_reset_to_users reset_digest:string \
+                  reset_sent_at:datetime
+rails db:migrate
+vi app/views/sessions/new.html.erb
+vi app/views/password_resets/new.html.erb
+curl https://localhost:3000/password_resets/new
+vi app/controllers/password_resets_controller.rb
+vi app/models/user.rb
+curl https://localhost:3000/password_resets
+vi app/mailers/user_mailer.rb
+vi app/views/user_mailer/password_reset.text.erb
+vi app/views/user_mailer/password_reset.html.erb
+vi test/mailers/previews/user_mailer_preview.rb
+curl https://localhost:3000/rails/mailers/user_mailer/password_reset
+curl https://localhost:3000/rails/mailers/user_mailer/password_reset.txt
+curl https://localhost:3000/
+vi test/mailers/user_mailer_test.rb
+rails t
+vi app/views/password_resets/edit.html.erb
+vi app/controllers/password_resets_controller.rb
+curl https://localhost:3000/rails/mailers/user_mailer/password_resets/xxxxx
+vi app/controllers/password_resets_controller.rb
+vi app/models/user.rb
+curl https://localhost:3000/password_resets/xxxx
+curl https://localhost:3000/users/101
+
+rails g integration_test password_resets
+vi test/integration/password_resets_test.rb
+rails t
+vi app/models/user.rb
+vi test/integration/password_resets_test.rb
+vi app/controllers/password_resets_controller.rb
+vi config/environments/production.rb
+
+
+
+
+
+```
+
 ```sh
 
 
 ```
-```sh
 
-
-```
 ```sh
 
 
@@ -641,6 +684,9 @@ heroku restart
 heroku addons:create sendgrid:starter
 heroku config:get SENDGRID_USERNAME
 heroku config:get SENDGRID_PASSWORD
+
+heroku addons:create sendgrid:starter
+heroku addons:add sendgrid:starter
 ```
 
 ```
