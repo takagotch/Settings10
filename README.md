@@ -49,6 +49,22 @@ vi app/controllers/microposts_controller.rb
 vi app/controllers/application_controller.rb
 ```
 
+```
+```
+
+```
+```
+```
+```
+
+```
+```
+```
+```
+
+```
+```
+
 ```sh
 git init .
 git add .
