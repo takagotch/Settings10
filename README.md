@@ -808,21 +808,37 @@ curl https://localhost:3000/users/1/following
 curl https://localhost:3000/users/1/followers
 
 rails g controller Relationships
+vi test/controllers/relationships_controller_test.rb
+vi app/controllers/relationships_controller.rb
+vi app/controllers/relationships_controller.rb
+curl https://localhost:3000/users/2
+vi app/views/users/_follow.html.erb
+vi app/views/users/_unfollow.html.erb
+vi app/controllers/relationships_controller.rb
+vi config/application.rb
+vi app/views/relationships/create.js.erb
+vi app/views/relationships/destroy.js.erb
+vi test/integration/following_test.rb
+rails t
+vi test/models/users_test.rb
+rails t
 
+rails c
+[1, 2, 3, 4].map { |i| i.to_s }
+[1, 2, 3, 4].map(&:to_s)
+User.first.following.map(&:id)
+User.first.following_ids
+User.first.following_ids.join(', ')
 
+vi app/models/user.rb
+rails t
+vi app/models/user.rb
+vi app/models/user.rb
+rails t
+curl https://localhost:3000/
 
-
-
+vi test/integration/following_test.rb
 ```
-
-
-
-
-
-
-
-
-
 
 ```sh
 git init .
@@ -852,6 +868,19 @@ heroku addons:create sendgrid:starter
 heroku addons:add sendgrid:starter
 
 git push heroku 
+heroku pg:reset DATABASE
+heroku run rails db:migrate
+heroku run rails db:seed
+
+git checkout following-users
+rails test
+git init .
+git add .
+git commit -m "Add user following"
+git checkout master
+git merge following-users
+git push origin master
+git push heroku master
 heroku pg:reset DATABASE
 heroku run rails db:migrate
 heroku run rails db:seed
