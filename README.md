@@ -59,10 +59,57 @@ git push -u origin
 heroku create
 git push heroku master
 heroku run rails db:migrate
+
+heroku logs
+```
+
+```
+
 ```
 
 ```sh
-cd 
+cd ~/environment
+rails new apptky2
+cd apptky2
+vi Gemfile
+bundle install --without production
+bundle update
+vi app/controllers/application_controller.rb
+vi config/routes.rb
+rails g controller StaticPages home help 
+vi config/routes.rb
+rails s
+https://localhost:3000/
+https://localhost:3000/static_pages/
+https://localhost:3000/static_pages/home
+https://localhost:3000/static_pages/help
+
+vi app/controllers/static_pages_controller.rb
+vi app/views/static/pages/home.html.erb
+vi app/views/static/pages/help.html.erb
+vi app/views/static_pages/home.html.erb
+vi app/views/static_pages/help.html.erb
+
+ls test/controllers/
+vi test/controllers/static_pages_controller_test.rb
+
+```
+
+
+```
+<%#
+rails g controller StaticPages home help
+rails destroy controller StaticPages home help
+
+rails g model User name:string email:string
+rails destroy model User
+
+rails db:migrate
+rails db:rollback
+rails db:migrate VERSION=0
+%>
+
+
 ```
 
 ```
