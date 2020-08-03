@@ -54,11 +54,11 @@ vi app/controllers/application_controller.rb
 
 ```
 ```
-```
-```
+
 
 ```
 ```
+
 ```
 ```
 
@@ -151,9 +151,26 @@ sudo yum install -y tmux
 vi Guardfile
 vi .gitignore
 bundle exec guard
-
 ```
 
+```sh
+vi app/views/layouts/application.html.erb
+vi app/helpers/application_helper.rb
+vi app/views/layouts/application.html.erb
+vi test/controllers/static_pages_controller_test.rb
+rails t
+vi app/views/static_pages/home.html.erb
+rails t
+vi ~/.irbrc
+rails c
+vi app/helpers/application_helper.rb
+vi app/views/layouts/application.html.erb
+vi app/helpers/application_helper.rb
+vi app/views/layouts/application.html.erb
+
+vi  example_user.rb
+rm exaple_user.rb
+```
 
 ```
 <%#
@@ -173,6 +190,10 @@ rails db:migrate VERSION=0
 git checkout -b static-pages
 git checkout master
 git merge static-pages
+
+git checkout -b rails-ruby
+git checkout master
+git merge rails-ruby
 
 # ps aux
 sudo yum install -y tmux
