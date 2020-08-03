@@ -611,6 +611,9 @@ git checkout -b advanced-login
 git checkout master
 git merge advanced-login
 
+git checkout -b updating-users
+git checkout master
+git merge updating-users
 
 
 
